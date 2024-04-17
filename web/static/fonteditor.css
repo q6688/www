@@ -1,0 +1,45 @@
+@font-face {
+	font-family: "wxfont";
+	src: url('/static/fonteditor.ttf') format('truetype');
+}
+
+.wxfont {
+	font-family: "wxfont" !important;
+}
+
+/* .tupian:before {
+	content: "\e626";
+}
+ */
+.caidan:before {
+	content: "\e600";
+}
+
+.zan:before {
+	content: "\e6CD";
+}
+
+.pinglun:before {
+	content: "\e662";
+}
+
+.del:before {
+	content: "\e63f";
+}
+
+.xiangji:before {
+	content: "\e638";
+}
+
+
+.jia:before {
+	content: "\e620";
+}
+
+.dingwei:before {
+	content: "\e675";
+}
+
+.gonggao:before {
+	content: "\e630";
+}

@@ -1,0 +1,1 @@
+import{o as e,c as o,w as r,i as s,l as t}from"./index-1c6cc45e.js";import{_ as a}from"./_plugin-vue_export-helper.1b428a4d.js";const n=a({data:()=>({query:{}}),onLoad(e){this.query=e},methods:{}},[["render",function(a,n,u,d,i,l){const p=s;return e(),o(p,null,{default:r((()=>[t(" 请先添加校园圈微信或者关注校园圈公众号 ")])),_:1})}]]);export{n as default};
