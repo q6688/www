@@ -38,6 +38,7 @@ let domainsUsingProxy = [
 ];
 
 let domainsCN = [
+    ".cn",
     "qq.com",
     "baidu.com",
     "zhihu.com",
@@ -47,8 +48,6 @@ let domainsCN = [
     "weibo.com",
     "youku.com"
 ];
-
-
 
 
 function FindProxyForURL(url, host) {
