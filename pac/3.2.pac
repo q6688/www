@@ -3,8 +3,8 @@ let domainsUsingProxy = [
     "youtube",
     "discord",
     "github",
-    "chatgpt",
-    "microsoft",
+    "chatgpt.com",
+    "microsoft.com",
     "ggpht.com",
     "doubleclick.net",
     // "gstatic.com",
@@ -38,8 +38,10 @@ let domainsUsingProxy = [
 ];
 
 let domainsCN = [
+    ".cn",
     "qq.com",
     "baidu.com",
+    "tencent.com",
     "zhihu.com",
     "aliyun.com",
     "doubao.com",
@@ -49,28 +51,30 @@ let domainsCN = [
 ];
 
 
+
 function FindProxyForURL(url, host) {
 
+   // if (host.includes("google.cn") || host.includes("googleapis.cn") ) {
+  //        return "PROXY 192.168.2.2:1080; DIRECT";
+   //         return "SOCKS5 192.168.2.2:1080";
+    //}
+
     for (let i = 0; i < domainsCN.length; i++) {
-        let domain = domainsCN[i];
-        if (host.includes(domain)) {
+        if (host.includes(domainsCN[i])) {
             return "DIRECT";
         }
     }
 
-
     for (let i = 0; i < domainsUsingProxy.length; i++) {
-        let domain = domainsUsingProxy[i];
-        if (host.includes(domain)) {
-            return "PROXY 192.168.2.2:1080; DIRECT";
+        if (host.includes(domainsUsingProxy[i])) {
+            return "PROXY 192.168.3.2:1080; DIRECT";
             return "SOCKS5 192.168.2.2:1080";
         }
     }
 
-
-    // return "PROXY 192.168.2.2:1081; DIRECT";
-    // return "SOCKS5 192.168.2.2:1080";
     return "DIRECT";
 }
 
 
+// google.cn
+// googleapis.cn
