@@ -54,10 +54,10 @@ let domainsCN = [
 
 function FindProxyForURL(url, host) {
 
-    if (host.includes("google.cn") || host.includes("googleapis.cn") ) {
-            return "PROXY 192.168.2.2:1080; DIRECT";
-            return "SOCKS5 192.168.2.2:1080";
-    }
+   // if (host.includes("google.cn") || host.includes("googleapis.cn") ) {
+  //        return "PROXY 192.168.2.2:1080; DIRECT";
+   //         return "SOCKS5 192.168.2.2:1080";
+    //}
 
     for (let i = 0; i < domainsCN.length; i++) {
         if (host.includes(domainsCN[i])) {
