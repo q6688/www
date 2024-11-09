@@ -38,7 +38,6 @@ let domainsUsingProxy = [
 ];
 
 let domainsCN = [
-    ".cn",
     "qq.com",
     "baidu.com",
     "zhihu.com",
