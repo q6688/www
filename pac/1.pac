@@ -52,6 +52,12 @@ let domainsCN = [
 
 
 function FindProxyForURL(url, host) {
+
+    if (host.includes("google.cn")) {
+        return "PROXY 192.168.2.2:1080; DIRECT";
+    }
+
+
     for (let i = 0; i < domainsCN.length; i++) {
         let domain = domainsCN[i];
         if (host.includes(domain)) {
