@@ -63,8 +63,8 @@ function FindProxyForURL(url, host) {
     for (let i = 0; i < domainsUsingProxy.length; i++) {
         let domain = domainsUsingProxy[i];
         if (host.includes(domain)) {
-            return "PROXY 192.168.2.2:1081; DIRECT";
-            return "SOCKS5 192.168.3.101:1080";
+            return "PROXY 192.168.2.2:1080; DIRECT";
+            return "SOCKS5 192.168.2.2:1080";
         }
     }
 
