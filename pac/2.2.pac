@@ -3,8 +3,8 @@ let domainsUsingProxy = [
     "youtube",
     "discord",
     "github",
-    "chatgpt",
-    "microsoft",
+    "chatgpt.com",
+    "microsoft.com",
     "ggpht.com",
     "doubleclick.net",
     // "gstatic.com",
@@ -70,8 +70,6 @@ function FindProxyForURL(url, host) {
         }
     }
 
-    // return "PROXY 192.168.2.2:1081; DIRECT";
-    // return "SOCKS5 192.168.2.2:1080";
     return "DIRECT";
 }
 
