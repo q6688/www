@@ -40,10 +40,10 @@ let domainsUsingProxy = [
 let domainsCN = [
     ".cn",
     "qq.com",
+    "tencent",
     "baidu.com",
     "zhihu.com",
     "aliyun.com",
-    "tencent",
     "doubao.com",
     "taobao.com",
     "weibo.com",
