@@ -41,6 +41,7 @@ let domainsCN = [
     ".cn",
     "qq.com",
     "baidu.com",
+    "tencent.com",
     "zhihu.com",
     "aliyun.com",
     "doubao.com",
