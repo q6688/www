@@ -54,11 +54,11 @@ let domainsCN = [
 
 function FindProxyForURL(url, host) {
 
-    for (let i = 0; i < domainsCN.length; i++) {
-        if (host.includes(domainsCN[i])) {
-            return "DIRECT";
-        }
-    }
+    //for (let i = 0; i < domainsCN.length; i++) {
+        //if (host.includes(domainsCN[i])) {
+            //return "DIRECT";
+        //}
+    //}
 
     for (let i = 0; i < domainsUsingProxy.length; i++) {
         if (host.includes(domainsUsingProxy[i])) {
