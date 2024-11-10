@@ -4,6 +4,10 @@ let domainsUsingProxy = [
     ".chatgpt.com",
     ".openai.com",
     ".microsoft.com",
+    ".googlevideo.com",
+    ".googleusercontent.com",
+    ".fbcdn.net",
+    ".doubleclick.net",
     ".ggpht.com",
     ".youtube.com",
     ".twitter.com",
@@ -23,15 +27,14 @@ let domainsUsingProxy = [
     ".twimg.com",
     ".docker.com",
     ".fbcdn.net",
-    ".segment.io",
     ".unpkg.com",
     ".jsdelivr.com",
     ".apple.com",
-    ".instagram",
+    ".instagram.com",
     ".cdninstagram.com",
     ".whatsapp.com",
     ".azureedge.net",
-    "gstatic.com"
+    ".gstatic.com"
 ];
 
 let keyword = [
