@@ -1,76 +1,81 @@
 let domainsUsingProxy = [
-    "google",
-    "youtube",
-    "discord",
-    "github",
-    "chatgpt.com",
-    "microsoft.com",
-    "ggpht.com",
-    "doubleclick.net",
-    // "gstatic.com",
-    "openai.com",
-    "oaistatic.com",
-    "ent.com",
-    "ytimg.com",
-    "bing.com",
-    "bing.net",
-    "bingapis.com",
-    "live.com",
-    "stackoverflow.com",
-    "wikipedia.org",
-    "godaddy.com",
-    "cloudflare",
-    "twitter",
-    "x.com",
-    "twimg.com",
-    "docker.com",
-    "facebook",
-    "fbcdn.net",
-    "segment.io",
-    "unpkg.com",
-    "jsdelivr.com",
-    "apple.com",
-    "instagram",
-    "cdninstagram.com",
-    "reddit",
-    "whatsapp",
-    "azureedge.net"
+    ".google.com",
+    ".googleapis.com",
+    ".chatgpt.com",
+    ".openai.com",
+    ".microsoft.com",
+    ".ggpht.com",
+    ".youtube.com",
+    ".twitter.com",
+    ".facebook.com",
+    ".doubleclick.net",
+    ".cloudflare.com",
+    ".github.com",
+    ".github.io",
+    ".discord.com"
+    ".oaistatic.com",
+    ".ytimg.com",
+    ".bing.com",
+    ".bing.net",
+    ".bingapis.com",
+    ".live.com",
+    ".x.com",
+    ".twimg.com",
+    ".docker.com",
+    ".fbcdn.net",
+    ".segment.io",
+    ".unpkg.com",
+    ".jsdelivr.com",
+    ".apple.com",
+    ".instagram",
+    ".cdninstagram.com",
+    ".whatsapp.com",
+    ".azureedge.net",
+    "gstatic.com"
 ];
+
+let keyword = [
+    
+]
+
 
 let domainsCN = [
     ".cn",
-    "qq.com",
-    "baidu.com",
-    "tencent.com",
-    "zhihu.com",
-    "aliyun.com",
-    "doubao.com",
-    "taobao.com",
-    "weibo.com",
-    "youku.com"
+    ".qq.com",
+    ".baidu.com",
+    ".tencent.com",
+    ".zhihu.com",
+    ".aliyun.com",
+    ".doubao.com",
+    ".taobao.com",
+    ".weibo.com",
+    ".youku.com"
 ];
 
 
 
 function FindProxyForURL(url, host) {
 
-   // if (host.includes("google.cn") || host.includes("googleapis.cn") ) {
-  //        return "PROXY 192.168.2.2:1080; DIRECT";
-   //         return "SOCKS5 192.168.2.2:1080";
-    //}
 
     for (let i = 0; i < domainsCN.length; i++) {
-        if (host.includes(domainsCN[i])) {
+        if (dnsDomainIs(host,domainsCN[i])) {
             return "DIRECT";
         }
     }
 
     for (let i = 0; i < domainsUsingProxy.length; i++) {
-        if (host.includes(domainsUsingProxy[i])) {
+        if (dnsDomainIs(host,domainsUsingProxy[i])) {
             return "PROXY 192.168.2.2:1080; DIRECT";
             return "SOCKS5 192.168.2.2:1080";
         }
     }
+
+   // for (let i = 0; i < keyword.length; i++) {
+   //    if (host.includes(keyword[i])) {
+    //        return "PROXY 192.168.2.2:1080; DIRECT";
+   //         return "SOCKS5 192.168.2.2:1080";
+   //     }
+   // }
 
     return "DIRECT";
 }
