@@ -7,7 +7,6 @@ let domainsUsingProxy = [
     "microsoft.com",
     "ggpht.com",
     "doubleclick.net",
-    // "gstatic.com",
     "openai.com",
     "oaistatic.com",
     "ent.com",
