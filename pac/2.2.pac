@@ -57,6 +57,10 @@ function FindProxyForURL(url, host) {
         //}
     //}
 
+     if (host.includes("google.cn") || host.includes("googleapis.cn") ) {
+            return "DIRECT";
+    }
+
     for (let i = 0; i < domainsUsingProxy.length; i++) {
         if (host.includes(domainsUsingProxy[i])) {
             return "PROXY 192.168.2.2:1080; DIRECT";
