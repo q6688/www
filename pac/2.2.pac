@@ -57,7 +57,7 @@ function FindProxyForURL(url, host) {
         //}
     //}
 
-     if (host.includes("google.cn") || host.includes("googleapis.cn") ) {
+     if (host.includes("google.cn") || host.includes("googleapis.cn")) {
             return "DIRECT";
     }
 
